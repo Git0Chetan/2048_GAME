@@ -1,3 +1,5 @@
+
+
 var board;
 var score = 0;
 var rows = 4;
@@ -64,6 +66,9 @@ document.addEventListener('keyup', (e) => {
         setTwo();
     }
     document.getElementById("score").innerText = score;
+    if(score>=2048){
+        document.getElementById("won").innerText = "🎉CONGRATULATION'S YOU WON🥳";
+    }
 })
 
 function filterZero(row){
